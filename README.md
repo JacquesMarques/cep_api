@@ -16,12 +16,23 @@ cd cep_api
 ```
 bundle install
 rails db:create
-rails db:migration
+rails db:migrate
 rails db:seed
 ```
 * Rodar o servidor:
 ```
-rails serve
+rails server
 ```
-
-
+Endpoints da API:
+```
+POST /api/v1/authenticate
+  parâmetros:
+    "email": "admin@cep.com",
+    "password": "123456"
+  
+  retorno:
+    {"auth_token":"eyJhbGciOiJI...VsA"}
+  
+GET 
+  
+```
