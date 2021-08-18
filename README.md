@@ -25,6 +25,7 @@ rails server
 ```
 Endpoints da API:
 ```
+# Faz o login e retorna o token se sucesso
 POST /api/v1/authenticate
   parâmetros:
     "email": "admin@cep.com",
@@ -33,6 +34,18 @@ POST /api/v1/authenticate
   retorno:
     {"auth_token":"eyJhbGciOiJI...VsA"}
   
-GET 
-  
+# Retorna os dados do CEP passado  
+GET /api/v1/ceps/:id
+    Authorization Bearer Token
+
+# Retorna a lista de consultas feitas anteriormente
+GET /api/v1/ceps
+    Authorization Bearer Token
 ```
+Testes execute:
+```
+  RAILS_ENV=test rails db:seed
+  rspec
+```
+
+

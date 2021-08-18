@@ -6,4 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cadastrando Administrador'
-User.create([{ email: 'admin@cep.com', password: '123456', password_confirmation: '123456' }])
+# User.create([{ email: 'admin@cep.com', password: '123456', password_confirmation: '123456' }])
+
+puts 'Create one record on ceps tabela'
+Cep.create([{ cep: "74015120", uf: "GO", cidade: "Goiânia", bairro: "Setor Central",
+               logradouro: "Rua 23", user_id: 1}])

@@ -1,6 +1,15 @@
 class Api::V1::CepsController < Api::ApplicationController
   before_action :set_base_url
 
+  # GET /ceps
+  def index
+    response = Cep.all
+    if response.nil?
+      response = 'Nenhum registro encontrado!'
+    end
+    render json: response
+  end
+
   # GET /ceps/12345678
   def show
     url = @base_url + params[:id]
